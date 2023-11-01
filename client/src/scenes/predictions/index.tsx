@@ -7,8 +7,7 @@ import { useMemo, useState } from 'react';
 import { CartesianGrid,Tooltip, Legend, Line, LineChart, ResponsiveContainer, XAxis, YAxis, Label } from 'recharts'
 import  regression,  { DataPoint } from 'regression';
 
-interface Props{};
-const Predictions = (Props: Props) => {
+const Predictions = () => {
     const { palette } = useTheme()
     const [isPredictions, setIsPredictiona] = useState(false)
     const { data: kpiData} = useGetKpisQuery();
@@ -19,8 +18,7 @@ const Predictions = (Props: Props) => {
         const formatted: Array<DataPoint> = monthData.map((
             {month, revenue, expenses}, i: number) => {
                 return [i, revenue]
-                }
-            );
+                })
         const regressionLine = regression.linear(formatted)
         return monthData.map(({month, revenue}, i: number) => {
             return {

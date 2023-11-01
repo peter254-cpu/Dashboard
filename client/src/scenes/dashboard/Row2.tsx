@@ -71,7 +71,7 @@ const Row2 = () => {
             field: "productIds",
             headerName: "Count",
             flex: 0.1,
-            renderCell: (params: GridCellParams) => params.value.length,
+            renderCell: (params: GridCellParams) => params.row.length,
         },
     ]
     console.log("productColumns", productColumns)
