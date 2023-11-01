@@ -7,9 +7,8 @@ import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
-interface Props {}
 
-const Row2 = (props: Props) => {
+const Row2 = () => {
     const { data: kpiData } = useGetKpisQuery();
     const { data: productData } = useGetProductsQuery();
     const { data: transactionsData } =  useGetTransactionsQuery();

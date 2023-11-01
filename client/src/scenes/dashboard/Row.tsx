@@ -5,9 +5,8 @@ import { useMemo } from 'react';
 import { ResponsiveContainer, AreaChart,  XAxis, Tooltip, YAxis, Line, CartesianGrid, Area, LineChart, Legend, BarChart, Bar } from "recharts";
 import BoxHeader from '@/components/boxHeader';
 
-interface Props{};
 
-const Row = (Props: Props) => {
+const Row = () => {
     const { data } = useGetKpisQuery();
     const { palette } = useTheme()
     const revenue = useMemo(() =>{
