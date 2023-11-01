@@ -36,7 +36,7 @@ app.use("/product", productRoutes);
 app.use("/transactions", transactionsRoutes);
 
 //set up database
-const PORT = 1337 || 9000;
+const PORT = process.env.PORT || 9000;
 mongoose.connect(process.env.MONGO_URL , {
   useNewUrlParser: true,
   useUnifiedTopology: true,
